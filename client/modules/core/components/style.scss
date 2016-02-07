@@ -19,10 +19,28 @@ html {
 
       header.header {
         display: block;
-        position: relative;
+        position: fixed;
         top: 0;
         right: 0;
         z-index: 1;
+
+        .logo.aspect {
+          cursor: pointer;
+          margin: $mini;
+          padding: $mini;
+          background: rgba($secondary-color, 0.75);
+          transition: all $fast;
+
+          .logo {
+            color: $light;
+            font-size: $tiny;
+            text-decoration: none;
+          }
+
+          &:hover {
+            background: $secondary-color;
+          }
+        }
       }
 
       .content {

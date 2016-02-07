@@ -1,0 +1,293 @@
+@import '_variables';
+
+html {
+
+  body {
+
+    // button
+
+    .button {
+      display: inline-block;
+      cursor: pointer;
+      margin: 0;
+      padding: $base;
+      outline: 0;
+      border: 0;
+      background-color: transparent;
+      color: $header-color;
+      text-align: center;
+      transition: all $faster;
+
+      &:hover {
+        color: $primary-color;
+        text-decoration: none;
+      }
+
+      &.primary {
+        border: 0;
+        background-color: rgba($primary-color, 0.75);
+        color: $offset-color;
+
+        &:hover {
+          background-color: rgba($secondary-color, 0.25);
+          color: $offset-color;
+        }
+      }
+
+      &.secondary {
+        border: 0;
+        background-color: rgba($secondary-color, 0.75);
+        color: $offset-color;
+
+        &:hover {
+          background-color: rgba($primary-color, 0.75);
+          color: $offset-color;
+        }
+      }
+
+      &.negative {
+        border: 0;
+        background-color: rgba($negative-color, 0.75);
+        color: $light;
+
+        &:hover {
+          background-color: rgba($negative-color, 0.25);
+          color: $secondary-color;
+        }
+      }
+
+      &.icon {
+        padding: $micro $mini;
+
+        &:hover {
+          transform: scale3d(1.25, 1.25, 1.25);
+        }
+      }
+
+      &.fluid {
+        width: $full;
+      }
+
+      &.centered {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      &.bottom {
+        position: fixed;
+        bottom: $base + $tiny;
+        left: $half;
+        transform: translateX(-$half);
+      }
+
+      &.circular {
+        padding: 0 $micro $quantum;
+        border-radius: $god;
+      }
+    }
+
+    // list
+
+    .list, ul {
+      padding-left: $large;
+      list-style-type: square;
+
+      &.unstyled {
+        padding: 0;
+        list-style-type: none;
+      }
+
+      &.ordered {
+        list-style-type: upper-hexadecimal;
+        text-indent: initial;
+      }
+
+      &.inline {
+        display: inline;
+        padding: 0;
+        list-style-type: none;
+
+        .item {
+          display: inline;
+        }
+      }
+    }
+
+    ol {
+      padding-left: $jumbo;
+    }
+
+    // label
+
+    .label {
+      display: inline-block;
+      position: relative;
+      padding: $tiny $base;
+      border: 0;
+      border-radius: $micro;
+      background-color: $highlight-color;
+      color: $secondary-color;
+
+      &.primary {
+        background-color: $primary-color;
+        color: $light;
+      }
+
+      &.secondary {
+        background-color: $secondary-color;
+        color: $light;
+      }
+    }
+
+    // form
+
+    .form {
+      width: $full;
+      margin: $base auto;
+      padding: $base;
+
+      &.account {
+
+        @media (min-width: $phone-width) {
+          width: $three-quarters;
+        }
+
+        @media (min-width: $tablet-width) {
+          width: $half;
+        }
+
+        @media (min-width: $laptop-width) {
+          width: $third;
+        }
+
+        @media (min-width: $desktop-width) {
+          width: $quarter;
+        }
+      }
+
+      .input.group {
+        display: flex;
+        position: relative;
+        margin-bottom: $base;
+
+        label,
+        .label {
+          vertical-align: middle;
+          margin: 0;
+          padding: ($small - $atomic) $small;
+          border-radius: $micro;
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+          background: $neutral-color;
+
+          &.error {
+            position: absolute;
+            top: $large + $small;
+            left: 0;
+            width: $full;
+            padding: $mini;
+            border: $micro solid $neutral-color;
+            color: $negative-color;
+            text-align: center;
+          }
+        }
+
+        input,
+        .input {
+          flex: 1;
+          margin: 0;
+          padding: $tiny;
+          outline: 0;
+          border: $micro solid $neutral-color;
+          border-radius: $micro;
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+        }
+
+        textarea.input {
+          height: $fluid-quarter;
+
+          @media (min-width: $tablet-width) {
+            height: $fluid-third;
+          }
+
+          @media (min-width: $laptop-width) {
+            height: $fluid-half;
+          }
+        }
+
+        .button {
+          margin-left: -$quantum;
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+        }
+      }
+    }
+
+    // figure
+
+    .figure {
+      position: relative;
+      margin: 0 auto;
+      border-bottom: $atomic solid $divider-color;
+
+      &:last-child {
+        border: 0;
+      }
+    }
+
+    // aspect
+
+    .aspect {
+      display: block;
+      position: relative;
+      margin: 0 auto;
+      padding: $base;
+      line-height: 0;
+    }
+
+    // message
+
+    .message {
+      margin: 0;
+
+      &.centered {
+        text-align: center;
+      }
+
+      &.light {
+        color: $light;
+      }
+    }
+
+    // link
+
+    .link {
+      cursor: pointer;
+      color: $primary-color;
+    }
+
+    // image
+
+    .image {
+      width: $full;
+      margin: $base auto;
+
+      &.background {
+        background-position: center center;
+        background-repeat: no-repeat;
+
+        &.thumbnail {
+          background-size: contain;
+        }
+      }
+
+      &.thumbnail {
+        padding: $tiny;
+      }
+    }
+  }
+}
