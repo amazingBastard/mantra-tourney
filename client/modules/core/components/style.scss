@@ -15,6 +15,7 @@ html {
       display: block;
       min-height: $fluid-full;
       overflow: hidden;
+      background-color: $dark;
 
       header.header {
         display: block;
@@ -47,14 +48,15 @@ html {
         position: relative;
         margin-bottom: $fluid-quarter;
         z-index: 1;
-        background-color: $neutral-color;
-        box-shadow: 0 0 $god 0 $highlight-color;
+        background-color: $light;
+        box-shadow: 0 0 $god 0 rgba($highlight-color, 0.75);
 
         @media (min-width: $tablet-width) {
           margin-bottom: $fluid-half;
         }
 
         .postlist {
+          padding: $large 0;
 
           ul {
             margin: 0 auto;
