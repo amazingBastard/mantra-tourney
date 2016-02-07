@@ -12,9 +12,8 @@ html {
 
     main.layout {
       position: relative;
-      display: flex;
+      display: block;
       min-height: $fluid-full;
-      flex-direction: column;
       overflow: hidden;
 
       header.header {
@@ -22,7 +21,7 @@ html {
         position: fixed;
         top: 0;
         right: 0;
-        z-index: 1;
+        z-index: 2;
 
         .logo.aspect {
           cursor: pointer;
@@ -46,19 +45,58 @@ html {
       .content {
         display: block;
         position: relative;
-        flex: 1;
+        margin-bottom: $fluid-quarter;
+        z-index: 1;
+        background-color: $neutral-color;
+        box-shadow: 0 0 $god 0 $highlight-color;
+
+        @media (min-width: $tablet-width) {
+          margin-bottom: $fluid-half;
+        }
+
+        .postlist {
+
+          ul {
+            margin: 0 auto;
+            padding: 0;
+            list-style-type: none;
+
+            li {
+              margin: 0;
+              padding: $base;
+              text-align: center;
+            }
+          }
+        }
       }
 
       footer.footer {
         display: block;
-        position: relative;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        height: $fluid-quarter;
+        width: $full;
+        z-index: 0;
+        background: url('images/jumbo.jpg') no-repeat;
+        background-position: center center;
+        background-size: cover;
+
+        @media (min-width: $tablet-width) {
+          height: $fluid-half;
+        }
 
         .copyright.aspect {
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: $full;
           padding: $mini;
           text-align: center;
 
           .copyright {
             margin: 0;
+            color: $neutral-color;
             font-size: $mini;
 
             .link {
