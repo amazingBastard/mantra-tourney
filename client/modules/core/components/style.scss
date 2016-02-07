@@ -28,7 +28,7 @@ html {
           cursor: pointer;
           margin: $mini;
           padding: $mini;
-          background: rgba($secondary-color, 0.75);
+          background-color: rgba($highlight-color, 0.75);
           transition: all $fast;
 
           .logo {
@@ -38,7 +38,7 @@ html {
           }
 
           &:hover {
-            background: $secondary-color;
+            background-color: $highlight-color;
           }
         }
       }
@@ -67,6 +67,25 @@ html {
             }
           }
         }
+
+        .toolbar.aspect {
+          position: fixed;
+          left: 0;
+          bottom: 0;
+          width: $full;
+          padding: 0;
+          z-index: 5;
+          text-align: center;
+
+          .icon.button {
+            margin: $mini;
+            background-color: rgba($highlight-color, 0.75);
+            color: $neutral-color;
+
+            &:hover {}
+            background-color: $highlight-color;
+          }
+        }
       }
 
       footer.footer {
@@ -82,11 +101,7 @@ html {
         background-size: cover;
 
         .copyright.aspect {
-          position: absolute;
-          left: 0;
-          bottom: 0;
-          width: $full;
-          padding: $mini;
+          padding: $tiny;
           text-align: center;
 
           .copyright {
