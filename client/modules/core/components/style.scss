@@ -52,6 +52,20 @@ html {
       footer.footer {
         display: block;
         position: relative;
+
+        .copyright.aspect {
+          padding: $mini;
+          text-align: center;
+
+          .copyright {
+            margin: 0;
+            font-size: $mini;
+
+            .link {
+              font-size: inherit;
+            }
+          }
+        }
       }
     }
   }
