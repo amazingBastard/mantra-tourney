@@ -1,5 +1,6 @@
 import React from 'react';
 import Logo from './logo.jsx';
+import Toolbar from './toolbar.jsx';
 import Copyright from './copyright.jsx';
 
 const Layout = ({content = () => null }) => (
@@ -10,6 +11,7 @@ const Layout = ({content = () => null }) => (
 
     <content className="content">
       {content()}
+      <Toolbar />
     </content>
 
     <footer className="footer">

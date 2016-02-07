@@ -2,7 +2,7 @@ const {describe, it} = global;
 import {expect} from 'chai';
 import {shallow} from 'enzyme';
 import MainLayout from '../layout.jsx';
-import Navigation from '../navigation.jsx';
+import Navigation from '../toolbar.jsx';
 
 describe('core.components.main_layout', () => {
   it('should contain navigation', () => {

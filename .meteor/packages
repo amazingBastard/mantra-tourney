@@ -26,6 +26,10 @@ audit-argument-checks
 check
 random
 
+# UI/UX
+
+fortawesome:fontawesome
+
 # Development
 
 fourseven:scss

@@ -46,14 +46,11 @@ html {
       .content {
         display: block;
         position: relative;
-        margin-bottom: $fluid-quarter;
+        overflow-y: auto;
+        margin-bottom: $fluid-half;
         z-index: 1;
         background-color: $light;
         box-shadow: 0 0 $god 0 rgba($highlight-color, 0.75);
-
-        @media (min-width: $tablet-width) {
-          margin-bottom: $fluid-half;
-        }
 
         .postlist {
           padding: $large 0;
@@ -77,16 +74,12 @@ html {
         position: fixed;
         left: 0;
         bottom: 0;
-        height: $fluid-quarter;
+        height: $fluid-half;
         width: $full;
         z-index: 0;
         background: url('images/jumbo.jpg') no-repeat;
         background-position: center center;
         background-size: cover;
-
-        @media (min-width: $tablet-width) {
-          height: $fluid-half;
-        }
 
         .copyright.aspect {
           position: absolute;
