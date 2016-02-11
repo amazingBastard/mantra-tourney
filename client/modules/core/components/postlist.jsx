@@ -5,7 +5,13 @@ const PostList = ({posts}) => (
     <ul>
       {posts.map(post => (
         <li key={post._id}>
-          <a href={`/post/${post._id}`}>{post.title}</a>
+          <h4 className="title">{post.title}</h4>
+          <h2 className="date">
+            02/06/2016 - 02/07/2016
+          </h2>
+          <p className="prize">$2,000</p>
+          <p className="location">Online</p>
+          <a href={`/post/${post._id}`}>more details</a>
         </li>
       ))}
     </ul>
