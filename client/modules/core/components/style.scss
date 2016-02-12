@@ -28,17 +28,17 @@ html {
           cursor: pointer;
           margin: $mini;
           padding: $mini;
-          border: $atomic solid $highlight-color;
+          border: $atomic solid $primary-color;
           transition: all $fast;
 
           .logo {
-            color: $highlight-color;
+            color: $primary-color;
             font-size: $tiny;
             text-decoration: none;
           }
 
           &:hover {
-            background-color: $highlight-color;
+            background-color: $primary-color;
 
             .logo {
               color: $light;
@@ -57,17 +57,16 @@ html {
         box-shadow: 0 0 $god 0 rgba($highlight-color, 0.75);
 
         .postlist {
-          padding: $large 0;
+          margin: 0 auto;
+          padding: $large $base;
 
-          ul {
-            margin: 0 auto;
-            padding: 0;
-            list-style-type: none;
+          .post.card {
+            margin: 0;
+            padding: $base;
+            text-align: center;
 
-            li {
-              margin: 0;
-              padding: $base;
-              text-align: center;
+            a {
+              text-decoration: none;
             }
           }
         }
@@ -87,7 +86,8 @@ html {
             background-color: rgba($highlight-color, 0.75);
             color: $neutral-color;
 
-            &:hover {}
+            &:hover {
+            }
             background-color: $highlight-color;
           }
         }
