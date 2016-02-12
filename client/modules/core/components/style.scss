@@ -103,6 +103,7 @@ html {
             width: $full;
             padding: 0;
             z-index: 5;
+            border-top: $quantum solid $dark;
             background-image: linear-gradient(rgba($secondary-color, 0), rgba($secondary-color, 0.5)), $background-halftone;
             text-align: center;
 
