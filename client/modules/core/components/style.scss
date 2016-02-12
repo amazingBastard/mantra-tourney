@@ -17,6 +17,8 @@ html {
       overflow: hidden;
       background-color: $dark;
 
+      // header
+
       header.header {
         display: block;
         position: fixed;
@@ -24,28 +26,36 @@ html {
         right: 0;
         z-index: 2;
 
-        .logo.aspect {
-          cursor: pointer;
-          margin: $mini;
-          padding: $mini;
-          border: $atomic solid $primary-color;
-          transition: all $fast;
+        .aspect {
 
-          .logo {
-            color: $primary-color;
-            font-size: $tiny;
-            text-decoration: none;
-          }
+          // logo
 
-          &:hover {
-            background-color: $primary-color;
+          &.logo {
+
+            cursor: pointer;
+            margin: $mini;
+            padding: $mini;
+            border: $atomic solid $primary-color;
+            transition: all $fast;
 
             .logo {
-              color: $light;
+              color: $primary-color;
+              font-size: $tiny;
+              text-decoration: none;
+            }
+
+            &:hover {
+              background-color: $primary-color;
+
+              .logo {
+                color: $light;
+              }
             }
           }
         }
       }
+
+      // content
 
       .content {
         display: block;
@@ -56,42 +66,60 @@ html {
         background-color: $light;
         box-shadow: 0 0 $god 0 rgba($highlight-color, 0.75);
 
-        .postlist {
-          margin: 0 auto;
-          padding: $large $base;
+        .aspect {
 
-          .post.card {
-            margin: 0;
-            padding: $base;
-            text-align: center;
+          // posts
 
-            a {
-              text-decoration: none;
+          &.posts {
+
+            .post.figure {
+              cursor: pointer;
+              border: $atomic solid $neutral-color;
+              text-align: center;
+              transition: all $faster;
+
+              .route.link {
+                text-decoration: none;
+              }
+
+              &:hover {
+                box-shadow: 0 0 $mini 0 $primary-color inset;
+                border-color: $primary-color;
+                background-color: $neutral-color;
+              }
+
+              &:active {
+                box-shadow: 0 0 $tiny 0 $primary-color inset;
+              }
             }
           }
-        }
 
-        .toolbar.aspect {
-          position: fixed;
-          left: 0;
-          bottom: 0;
-          width: $full;
-          padding: 0;
-          z-index: 5;
-          background-image: linear-gradient(rgba($secondary-color, 0), rgba($secondary-color, 0.5)), $background-halftone;
-          text-align: center;
+          // toolbar
 
-          .icon.button {
-            margin: $mini;
-            background-color: rgba($highlight-color, 0.75);
-            color: $neutral-color;
+          &.toolbar {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: $full;
+            padding: 0;
+            z-index: 5;
+            background-image: linear-gradient(rgba($secondary-color, 0), rgba($secondary-color, 0.5)), $background-halftone;
+            text-align: center;
 
-            &:hover {
+            .icon.button {
+              margin: $mini;
+              background-color: rgba($highlight-color, 0.75);
+              color: $neutral-color;
+
+              &:hover {
+              }
+              background-color: $highlight-color;
             }
-            background-color: $highlight-color;
           }
         }
       }
+
+      // footer
 
       footer.footer {
         display: block;
@@ -105,17 +133,22 @@ html {
         background-position: center center;
         background-size: cover;
 
-        .copyright.aspect {
-          padding: $tiny;
-          text-align: center;
+        .aspect {
 
-          .copyright {
-            margin: 0;
-            color: $neutral-color;
-            font-size: $mini;
+          // copyright
 
-            .link {
-              font-size: inherit;
+          &.copyright {
+            padding: $tiny;
+            text-align: center;
+
+            .copyright {
+              margin: 0;
+              color: $neutral-color;
+              font-size: $mini;
+
+              .link {
+                font-size: inherit;
+              }
             }
           }
         }

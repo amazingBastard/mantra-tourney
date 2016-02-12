@@ -227,7 +227,8 @@ html {
 
     .figure {
       position: relative;
-      margin: 0 auto;
+      margin: $base auto;
+      padding: $base;
       border-bottom: $atomic solid $divider-color;
 
       &:last-child {

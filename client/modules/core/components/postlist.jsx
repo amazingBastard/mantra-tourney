@@ -1,10 +1,10 @@
 import React from 'react';
 
 const PostList = ({posts}) => (
-  <aspect className='postlist aspect'>
+  <aspect className='posts aspect'>
     {posts.map(post => (
-      <figure className="post card" key={post._id}>
-        <a href={`/post/${post._id}`}>
+      <figure className="post figure" key={post._id}>
+        <a className="route link" href={`/post/${post._id}`}>
           <h4 className="title">{post.title}</h4>
 
           <h2 className="date">
