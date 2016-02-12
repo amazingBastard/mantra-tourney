@@ -28,17 +28,21 @@ html {
           cursor: pointer;
           margin: $mini;
           padding: $mini;
-          background-color: rgba($highlight-color, 0.75);
+          border: $atomic solid $highlight-color;
           transition: all $fast;
 
           .logo {
-            color: $light;
+            color: $highlight-color;
             font-size: $tiny;
             text-decoration: none;
           }
 
           &:hover {
             background-color: $highlight-color;
+
+            .logo {
+              color: $light;
+            }
           }
         }
       }
@@ -75,6 +79,7 @@ html {
           width: $full;
           padding: 0;
           z-index: 5;
+          background-image: linear-gradient(rgba($secondary-color, 0), rgba($secondary-color, 0.5)), $background-halftone;
           text-align: center;
 
           .icon.button {
