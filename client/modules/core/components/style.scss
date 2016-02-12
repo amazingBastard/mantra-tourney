@@ -101,7 +101,7 @@ html {
         height: $fluid-half;
         width: $full;
         z-index: 0;
-        background: url('images/jumbo.jpg') no-repeat;
+        background-image: $background-footer;
         background-position: center center;
         background-size: cover;
 
