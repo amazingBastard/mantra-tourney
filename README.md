@@ -2,6 +2,8 @@
 
 This is a simple tournament listing app for StarCraft written in [Mantra](https://github.com/kadirahq/mantra).
 
+[DEMO](http://tourneys.meteor.com)
+
 ### Setting Up
 
 * Clone this repo
