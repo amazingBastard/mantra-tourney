@@ -103,18 +103,12 @@ html {
             width: $full;
             padding: 0;
             z-index: 5;
-            border-top: $quantum solid $dark;
+            border-top: $quantum solid rgba($dark, 0.5);
             background-image: linear-gradient(rgba($secondary-color, 0), rgba($secondary-color, 0.5)), $background-halftone;
             text-align: center;
 
             .icon.button {
               margin: $mini;
-              background-color: rgba($highlight-color, 0.75);
-              color: $neutral-color;
-
-              &:hover {
-              }
-              background-color: $highlight-color;
             }
           }
         }

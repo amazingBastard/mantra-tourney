@@ -13,45 +13,58 @@ html {
       padding: $base;
       outline: 0;
       border: 0;
-      background-color: transparent;
-      color: $header-color;
+      box-shadow: 0 0 $micro 0 $secondary-color;
+      background-color: rgba($link-color, 0.75);
+      color: $neutral-color;
       text-align: center;
+      text-decoration: none;
       transition: all $faster;
 
       &:hover {
-        color: $primary-color;
-        text-decoration: none;
+        box-shadow: 0 0 $mini 0 $link-color;
+        background-color: $link-color;
+        color: $light;
       }
 
       &.primary {
-        border: 0;
         background-color: rgba($primary-color, 0.75);
-        color: $offset-color;
+        color: $neutral-color;
 
         &:hover {
-          background-color: rgba($secondary-color, 0.25);
-          color: $offset-color;
+          box-shadow: 0 0 $mini 0 $primary-color;
+          background-color: $primary-color;
+          color: $neutral-color;
         }
       }
 
       &.secondary {
-        border: 0;
         background-color: rgba($secondary-color, 0.75);
         color: $offset-color;
 
         &:hover {
-          background-color: rgba($primary-color, 0.75);
+          box-shadow: 0 0 $mini 0 $secondary-color;
+          background-color: $secondary-color;
           color: $offset-color;
         }
       }
 
+      &.neutral {
+        background-color: rgba($neutral-color, 0.75);
+        color: $secondary-color;
+
+        &:hover {
+          box-shadow: 0 0 $mini 0 $neutral-color;
+          background-color: $neutral-color;
+        }
+      }
+
       &.negative {
-        border: 0;
         background-color: rgba($negative-color, 0.75);
         color: $light;
 
         &:hover {
-          background-color: rgba($negative-color, 0.25);
+          box-shadow: 0 0 $mini 0 $negative-color;
+          background-color: $negative-color;
           color: $secondary-color;
         }
       }
