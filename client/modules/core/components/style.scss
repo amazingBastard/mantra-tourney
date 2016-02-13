@@ -80,7 +80,7 @@ html {
             margin: $base auto;
             box-shadow: 0 0 $micro 0 rgba($secondary-color, 0.25);
             border: $atomic solid rgba($secondary-color, 0.25);
-            background-image: $background-figure;
+            background-image: $background-halftone;
             text-align: center;
             transition: all $faster;
 
@@ -179,7 +179,7 @@ html {
                   bottom: 0;
                   margin: $mini;
                   padding: $tiny;
-                  background: rgba($secondary-color, 0.10);
+                  background: $gray-lighter;
                   color: rgba($secondary-color, 0.5);
                   box-shadow: 0 0 $micro 0 rgba($secondary-color, 0.5);
                 }
@@ -259,7 +259,7 @@ html {
             padding: 0;
             z-index: 5;
             border-top: $quantum solid rgba($dark, 0.5);
-            background-image: linear-gradient(rgba($secondary-color, 0), rgba($secondary-color, 0.5)), $background-halftone;
+            background-color: rgba($secondary-color, 0.5);
             text-align: center;
 
             .icon.button {
