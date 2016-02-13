@@ -12,7 +12,7 @@ const PostList = ({posts}) => (
             <span className="meta date-end">Feb 7, 2016</span>
           </h2>
 
-          <h1 className="meta prize">$2,000 <small className="prize-label">prize</small></h1>
+          <h1 className="meta prize">$2,000</h1>
 
           <p className="meta location left">Online</p>
 

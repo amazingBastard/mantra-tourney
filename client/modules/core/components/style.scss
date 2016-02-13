@@ -91,6 +91,7 @@ html {
                 }
 
                 .date {
+                  margin: $mini auto;
 
                   .meta {
                     display: inline-block;
@@ -112,14 +113,6 @@ html {
                 }
 
                 .meta {
-
-                  &.prize {
-
-                    .prize-label {
-                      color: rgba($secondary-color, 0.5);
-                      font-size: $half;
-                    }
-                  }
 
                   &.location,
                   &.players {
