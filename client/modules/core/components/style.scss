@@ -66,182 +66,188 @@ html {
         background-color: $light;
         box-shadow: 0 0 $god 0 rgba($highlight-color, 0.75);
 
-        .aspect {
+        // posts
 
-          // posts
+        .posts.list {
+          margin: 0;
+          padding: $base;
+          list-style-type: none;
 
-          &.posts {
+          .post.item {
+            position: relative;
+            cursor: pointer;
+            padding: $base;
+            margin: $base auto;
+            box-shadow: 0 0 $micro 0 rgba($secondary-color, 0.25);
+            border: $atomic solid rgba($secondary-color, 0.25);
+            background-image: $background-figure;
+            text-align: center;
+            transition: all $faster;
 
-            .post.figure {
-              cursor: pointer;
-              box-shadow: 0 0 $micro 0 rgba($secondary-color, 0.25);
-              border: $atomic solid rgba($secondary-color, 0.25);
-              background-image: $background-figure;
-              text-align: center;
-              transition: all $faster;
+            .route.link {
+              text-decoration: none;
+
+              .title {
+                color: rgba($secondary-color, 0.75);
+                font-weight: 300;
+                text-transform: uppercase;
+                transition: all $faster;
+              }
+
+              .date {
+                position: relative;
+                margin: $mini auto;
+
+                .meta {
+                  position: relative;
+                  display: block;
+                  padding: $micro;
+                  box-shadow: 0 0 $micro 0 rgba($secondary-color, 0.5);
+                  background-color: $secondary-color;
+                  color: $highlight-color;
+                  text-transform: uppercase;
+                  font-weight: 400;
+
+                  @media (min-width: $tablet-width) {
+                    display: inline-block;
+                  }
+
+                  &.date-start {
+                    padding-bottom: $mini;
+                    background-color: $highlight-color;
+                    color: $secondary-color;
+
+                    @media (min-width: $tablet-width) {
+                      padding-bottom: $micro;
+                      padding-right: $tiny;
+                      background-color: $secondary-color;
+                      color: $highlight-color;
+                    }
+
+                    .date-label {
+                      bottom: 0;
+                    }
+                  }
+
+                  &.date-end {
+                    padding-top: $mini;
+
+                    @media (min-width: $tablet-width) {
+                      padding-top: $micro;
+                      padding-left: $tiny;
+                    }
+
+                    .date-label {
+                      top: 0;
+                    }
+                  }
+
+                  .date-label {
+                    position: absolute;
+                    left: $half;
+                    transform: translateX(-$half);
+                    font-size: $quarter;
+
+                    @media (min-width: $tablet-width) {
+                      display: none;
+                    }
+                  }
+                }
+
+                .divider.helper {
+                  display: none;
+                  position: absolute;
+                  top: $half;
+                  left: $half;
+                  transform: translate(-$half, -$half);
+                  color: $light;
+                  font-weight: 400;
+                  z-index: 1;
+
+                  @media (min-width: $tablet-width) {
+                    display: block;
+                  }
+                }
+              }
+
+              .meta {
+                transition: all $faster;
+
+                &.location,
+                &.players {
+                  position: absolute;
+                  bottom: 0;
+                  margin: $mini;
+                  padding: $tiny;
+                  background: rgba($secondary-color, 0.10);
+                  color: rgba($secondary-color, 0.5);
+                  box-shadow: 0 0 $micro 0 rgba($secondary-color, 0.5);
+                }
+
+                &.left {
+                  left: 0;
+                }
+
+                &.right {
+                  right: 0;
+                }
+              }
+            }
+
+            &:hover {
+              box-shadow: 0 0 $mini 0 rgba($secondary-color, 0.5);
+              border-color: $secondary-color;
 
               .route.link {
-                text-decoration: none;
 
                 .title {
-                  color: rgba($secondary-color, 0.75);
-                  font-weight: 300;
-                  text-transform: uppercase;
-                  transition: all $faster;
+                  color: $secondary-color;
                 }
 
                 .date {
-                  position: relative;
-                  margin: $mini auto;
 
                   .meta {
-                    position: relative;
-                    display: block;
-                    padding: $micro;
-                    box-shadow: 0 0 $micro 0 rgba($secondary-color, 0.5);
-                    background-color: $secondary-color;
-                    color: $highlight-color;
-                    text-transform: uppercase;
-                    font-weight: 400;
+                    box-shadow: 0 0 $mini 0 rgba($highlight-color, 0.5);
 
                     @media (min-width: $tablet-width) {
-                      display: inline-block;
+                      background-color: $highlight-color;
+                      color: $secondary-color;
                     }
 
                     &.date-start {
-                      padding-bottom: $mini;
-                      background-color: $highlight-color;
-                      color: $secondary-color;
+                      background-color: $secondary-color;
+                      color: $highlight-color;
 
                       @media (min-width: $tablet-width) {
-                        padding-bottom: $micro;
-                        padding-right: $tiny;
-                        background-color: $secondary-color;
-                        color: $highlight-color;
-                      }
-
-                      .date-label {
-                        bottom: 0;
+                        background-color: $highlight-color;
+                        color: $secondary-color;
                       }
                     }
 
                     &.date-end {
-                      padding-top: $mini;
-
-                      @media (min-width: $tablet-width) {
-                        padding-top: $micro;
-                        padding-left: $tiny;
-                      }
-
-                      .date-label {
-                        top: 0;
-                      }
-                    }
-
-                    .date-label {
-                      position: absolute;
-                      left: $half;
-                      transform: translateX(-$half);
-                      font-size: $quarter;
-
-                      @media (min-width: $tablet-width) {
-                        display: none;
-                      }
-                    }
-                  }
-
-                  .divider.helper {
-                    display: none;
-                    position: absolute;
-                    top: $half;
-                    left: $half;
-                    transform: translate(-$half, -$half);
-                    color: $light;
-                    font-weight: 400;
-                    z-index: 1;
-
-                    @media (min-width: $tablet-width) {
-                      display: block;
+                      background-color: $highlight-color;
+                      color: $secondary-color;
                     }
                   }
                 }
 
                 .meta {
-                  transition: all $faster;
 
                   &.location,
                   &.players {
-                    position: absolute;
-                    bottom: 0;
-                    margin: $mini;
-                    padding: $tiny;
-                    background: rgba($secondary-color, 0.10);
-                    color: rgba($secondary-color, 0.5);
-                    box-shadow: 0 0 $micro 0 rgba($secondary-color, 0.5);
-                  }
-
-                  &.left {
-                    left: 0;
-                  }
-
-                  &.right {
-                    right: 0;
+                    color: rgba($secondary-color, 0.75);
                   }
                 }
-              }
-
-              &:hover {
-                box-shadow: 0 0 $mini 0 rgba($secondary-color, 0.5);
-                border-color: $secondary-color;
-
-                .route.link {
-
-                  .title {
-                    color: $secondary-color;
-                  }
-
-                  .date {
-
-                    .meta {
-                      box-shadow: 0 0 $mini 0 rgba($highlight-color, 0.5);
-
-                      @media (min-width: $tablet-width) {
-                        background-color: $highlight-color;
-                        color: $secondary-color;
-                      }
-
-                      &.date-start {
-                        background-color: $secondary-color;
-                        color: $highlight-color;
-
-                        @media (min-width: $tablet-width) {
-                          background-color: $highlight-color;
-                          color: $secondary-color;
-                        }
-                      }
-
-                      &.date-end {
-                        background-color: $highlight-color;
-                        color: $secondary-color;
-                      }
-                    }
-                  }
-
-                  .meta {
-
-                    &.location,
-                    &.players {
-                      color: rgba($secondary-color, 0.75);
-                    }
-                  }
-                }
-              }
-
-              &:active {
-                box-shadow: 0 0 $tiny 0 $primary-color inset;
               }
             }
+
+            &:active {
+              box-shadow: 0 0 $tiny 0 $primary-color inset;
+            }
           }
+        }
+
+        .aspect {
 
           // toolbar
 

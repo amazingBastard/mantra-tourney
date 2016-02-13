@@ -1,9 +1,9 @@
 import React from 'react';
 
 const PostList = ({posts}) => (
-  <aspect className='posts aspect'>
+  <ul className='posts list'>
     {posts.map(post => (
-      <figure className="post figure" key={post._id}>
+      <li className="post item" key={post._id}>
         <a className="route link" href={`/post/${post._id}`}>
           <h4 className="title">{post.title}</h4>
 
@@ -19,9 +19,9 @@ const PostList = ({posts}) => (
 
           <p className="meta players right">16 <span className="players-label">players</span></p>
         </a>
-      </figure>
+      </li>
     ))}
-  </aspect>
+  </ul>
 );
 
 export default PostList;
