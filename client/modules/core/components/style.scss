@@ -91,28 +91,83 @@ html {
                 }
 
                 .date {
+                  position: relative;
                   margin: $mini auto;
 
                   .meta {
-                    display: inline-block;
+                    position: relative;
+                    display: block;
                     padding: $micro;
                     box-shadow: 0 0 $micro 0 rgba($secondary-color, 0.5);
+                    background-color: $secondary-color;
+                    color: $highlight-color;
                     text-transform: uppercase;
-                    font-weight: 500;
+                    font-weight: 400;
+
+                    @media (min-width: $tablet-width) {
+                      display: inline-block;
+                    }
 
                     &.date-start {
-                      background-color: #cd571a;
-                      color: #0F161E;
+                      padding-bottom: $mini;
+                      background-color: $highlight-color;
+                      color: $secondary-color;
+
+                      @media (min-width: $tablet-width) {
+                        padding-bottom: $micro;
+                        padding-right: $tiny;
+                        background-color: $secondary-color;
+                        color: $highlight-color;
+                      }
+
+                      .date-label {
+                        bottom: 0;
+                      }
                     }
 
                     &.date-end {
-                      background-color: #0F161E;
-                      color: #cd571a;
+                      padding-top: $mini;
+
+                      @media (min-width: $tablet-width) {
+                        padding-top: $micro;
+                        padding-left: $tiny;
+                      }
+
+                      .date-label {
+                        top: 0;
+                      }
+                    }
+
+                    .date-label {
+                      position: absolute;
+                      left: $half;
+                      transform: translateX(-$half);
+                      font-size: $quarter;
+
+                      @media (min-width: $tablet-width) {
+                        display: none;
+                      }
+                    }
+                  }
+
+                  .divider.helper {
+                    display: none;
+                    position: absolute;
+                    top: $half;
+                    left: $half;
+                    transform: translate(-$half, -$half);
+                    color: $light;
+                    font-weight: 400;
+                    z-index: 1;
+
+                    @media (min-width: $tablet-width) {
+                      display: block;
                     }
                   }
                 }
 
                 .meta {
+                  transition: all $faster;
 
                   &.location,
                   &.players {
@@ -122,7 +177,7 @@ html {
                     padding: $tiny;
                     background: rgba($secondary-color, 0.10);
                     color: rgba($secondary-color, 0.5);
-                    box-shadow: 0 0 $micro 0 rgba($secondary-color, 0.25);
+                    box-shadow: 0 0 $micro 0 rgba($secondary-color, 0.5);
                   }
 
                   &.left {
@@ -143,6 +198,41 @@ html {
 
                   .title {
                     color: $secondary-color;
+                  }
+
+                  .date {
+
+                    .meta {
+                      box-shadow: 0 0 $mini 0 rgba($highlight-color, 0.5);
+
+                      @media (min-width: $tablet-width) {
+                        background-color: $highlight-color;
+                        color: $secondary-color;
+                      }
+
+                      &.date-start {
+                        background-color: $secondary-color;
+                        color: $highlight-color;
+
+                        @media (min-width: $tablet-width) {
+                          background-color: $highlight-color;
+                          color: $secondary-color;
+                        }
+                      }
+
+                      &.date-end {
+                        background-color: $highlight-color;
+                        color: $secondary-color;
+                      }
+                    }
+                  }
+
+                  .meta {
+
+                    &.location,
+                    &.players {
+                      color: rgba($secondary-color, 0.75);
+                    }
                   }
                 }
               }
@@ -192,6 +282,9 @@ html {
           // copyright
 
           &.copyright {
+            position: absolute;
+            bottom: 0;
+            width: $full;
             padding: $tiny;
             text-align: center;
 
