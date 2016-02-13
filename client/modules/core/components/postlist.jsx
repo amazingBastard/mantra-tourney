@@ -8,14 +8,15 @@ const PostList = ({posts}) => (
           <h4 className="title">{post.title}</h4>
 
           <h2 className="date">
-            02/06/2016 - 02/07/2016
+            <span className="meta date-start">Feb 6, 2016</span>
+            <span className="meta date-end">Feb 7, 2016</span>
           </h2>
 
-          <p className="prize">$2,000 prize</p>
+          <h1 className="meta prize">$2,000 <small className="prize-label">prize</small></h1>
 
-          <p className="players">16 players</p>
+          <p className="meta location left">Online</p>
 
-          <p className="location">Online</p>
+          <p className="meta players right">16 <span className="players-label">players</span></p>
         </a>
       </figure>
     ))}
