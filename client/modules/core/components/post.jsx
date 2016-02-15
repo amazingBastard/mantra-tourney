@@ -5,10 +5,10 @@ const Post = ({post}) => (
   <aspect className="post aspect">
     {post.saving ? <p>Saving...</p> : null}
     <h2 className="title">{post.title}</h2>
-    <p className="content">
+    <p className="post-content">
       {post.content}
     </p>
-    <div className="comments">
+    <div className="post-comments">
       <h4>Comments</h4>
       <CommentList postId={post._id}/>
     </div>
