@@ -78,8 +78,8 @@ html {
             cursor: pointer;
             padding: $base;
             margin: $base auto;
-            box-shadow: 0 0 $micro 0 rgba($secondary-color, 0.25);
-            border: $atomic solid rgba($secondary-color, 0.25);
+            box-shadow: 0 0 $mini 0 rgba($secondary-color, 0.5);
+            border: $atomic solid rgba($secondary-color, 0.5);
             background-image: $background-halftone;
             text-align: center;
             transition: all $faster;
@@ -195,7 +195,7 @@ html {
             }
 
             &:hover {
-              box-shadow: 0 0 $mini 0 rgba($secondary-color, 0.5);
+              box-shadow: 0 0 $tiny 0 rgba($secondary-color, 0.75);
               border-color: $secondary-color;
 
               .route.link {
