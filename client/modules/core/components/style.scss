@@ -100,7 +100,7 @@ html {
 
                 .meta {
                   position: relative;
-                  display: block;
+                  display: inline-block;
                   padding: $micro;
                   box-shadow: 0 0 $micro 0 rgba($secondary-color, 0.5);
                   background-color: $secondary-color;
@@ -108,54 +108,17 @@ html {
                   text-transform: uppercase;
                   font-weight: 400;
 
-                  @media (min-width: $tablet-width) {
-                    display: inline-block;
-                  }
-
                   &.date-start {
-                    padding-bottom: $mini;
-                    background-color: $highlight-color;
-                    color: $secondary-color;
-
-                    @media (min-width: $tablet-width) {
-                      padding-bottom: $micro;
-                      padding-right: $tiny;
-                      background-color: $secondary-color;
-                      color: $highlight-color;
-                    }
-
-                    .date-label {
-                      bottom: 0;
-                    }
+                    padding-right: $mini;
                   }
 
                   &.date-end {
-                    padding-top: $mini;
-
-                    @media (min-width: $tablet-width) {
-                      padding-top: $micro;
-                      padding-left: $tiny;
-                    }
-
-                    .date-label {
-                      top: 0;
-                    }
-                  }
-
-                  .date-label {
-                    position: absolute;
-                    left: $half;
-                    transform: translateX(-$half);
-                    font-size: $quarter;
-
-                    @media (min-width: $tablet-width) {
-                      display: none;
-                    }
+                    padding-left: $mini;
                   }
                 }
 
                 .divider.helper {
-                  display: none;
+                  display: block;
                   position: absolute;
                   top: $half;
                   left: $half;
@@ -163,10 +126,6 @@ html {
                   color: $light;
                   font-weight: 400;
                   z-index: 1;
-
-                  @media (min-width: $tablet-width) {
-                    display: block;
-                  }
                 }
               }
 
@@ -208,26 +167,8 @@ html {
 
                   .meta {
                     box-shadow: 0 0 $mini 0 rgba($highlight-color, 0.5);
-
-                    @media (min-width: $tablet-width) {
-                      background-color: $highlight-color;
-                      color: $secondary-color;
-                    }
-
-                    &.date-start {
-                      background-color: $secondary-color;
-                      color: $highlight-color;
-
-                      @media (min-width: $tablet-width) {
-                        background-color: $highlight-color;
-                        color: $secondary-color;
-                      }
-                    }
-
-                    &.date-end {
-                      background-color: $highlight-color;
-                      color: $secondary-color;
-                    }
+                    background-color: $highlight-color;
+                    color: $secondary-color;
                   }
                 }
 
