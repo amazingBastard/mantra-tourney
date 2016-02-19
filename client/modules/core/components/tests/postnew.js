@@ -1,17 +1,17 @@
 const {describe, it} = global;
 import {expect} from 'chai';
 import {shallow} from 'enzyme';
-import NewPost from '../newpost.jsx';
+import PostNew from '../postnew.jsx';
 
-describe('core.components.newpost', () => {
+describe('core.components.postnew', () => {
   it('should show the error if there are any', () => {
     const error = 'TheError';
-    const el = shallow(<NewPost error={error} />);
+    const el = shallow(<PostNew error={error} />);
     expect(el.html()).to.match(/TheError/);
   });
 
   it('should display the create post form', () => {
-    const el = shallow(<NewPost />);
+    const el = shallow(<PostNew />);
     const title = el.find('input').first();
     const content = el.find('textarea').first();
     const button = el.find('button').first();
@@ -31,7 +31,7 @@ describe('core.components.newpost', () => {
       done();
     };
 
-    const el = shallow(<NewPost create={onCreate} />);
+    const el = shallow(<PostNew create={onCreate} />);
     const instance = el.instance();
 
     instance.refs = {

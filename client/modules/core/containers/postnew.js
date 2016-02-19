@@ -1,4 +1,4 @@
-import NewPost from '../components/newpost.jsx';
+import PostNew from '../components/postnew.jsx';
 import {useDeps, composeWithTracker, composeAll} from 'mantra-core';
 
 export const composer = ({context, clearErrors}, onData) => {
@@ -19,4 +19,4 @@ export const depsMapper = (context, actions) => ({
 export default composeAll(
   composeWithTracker(composer),
   useDeps(depsMapper)
-)(NewPost);
+)(PostNew);

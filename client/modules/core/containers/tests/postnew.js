@@ -3,9 +3,9 @@
 // const { describe, it } = global;
 // import {expect} from 'chai';
 // import {stub, spy} from 'sinon';
-// import {composer, depsMapper} from '../newpost';
+// import {composer, depsMapper} from '../postnew';
 
-// describe('containers.newpost', () => {
+// describe('containers.postnew', () => {
 //   describe('composer', () => {
 //     it('should get SAVING_ERROR from local state');
 //     it('should get SAVING_NEW_POST from local state');
