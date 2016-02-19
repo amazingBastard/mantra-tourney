@@ -10,8 +10,8 @@ let title = 'Tourney.News | News for upcoming Starcraft II tournaments',
     favicon = {
       rel: 'icon',
       sizes: '16x16 32x32',
-      type: 'image/jpg',
-      href: '/favicon.jpg'
+      type: 'image/png',
+      href: '/favicon.png'
     };
 
 DocHead.setTitle(title);
