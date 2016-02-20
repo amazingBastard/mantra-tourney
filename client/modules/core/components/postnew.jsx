@@ -8,14 +8,19 @@ class PostNew extends React.Component {
         <h2>Add New Post</h2>
         {error ? <p style={{color: 'red'}}>{error}</p> : null}
 
-        <input ref="titleRef" type="Text" placeholder="Enter your post title." /> <br/>
-        <textarea ref="contentRef" placeholder="Enter your post content." /> <br/>
-        <button onClick={this.createPost.bind(this)}>Add New</button>
+        <form className="new post form" onSubmit={this.createPost.bind(this)}>
+          <input ref="titleRef" type="text" placeholder="Enter your post title."/>
+          <textarea ref="contentRef" placeholder="Enter your post content."/>
+          <button type="submit" className="primary button">Add New</button>
+        </form>
       </aspect>
     );
   }
 
-  createPost() {
+  createPost(event) {
+    if (event && event.preventDefault) {
+      event.preventDefault();
+    }
     const {create} = this.props;
     const {titleRef, contentRef} = this.refs;
 
